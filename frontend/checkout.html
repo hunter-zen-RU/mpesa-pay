@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#111827">
+    <title>Complete payment — Payflow</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="checkout-body">
+    <header class="topbar checkout-topbar"><a class="brand" href="./"><span class="brand-mark">P</span> payflow</a><span class="secure-label">🔒 Secure checkout</span></header>
+    <main class="checkout-wrap">
+      <section class="checkout-card">
+        <div class="checkout-brand"><span class="mpesa-mark">M</span><span>M-Pesa checkout</span></div>
+        <div id="checkout-content">
+          <p class="muted">Loading payment details…</p>
+        </div>
+        <p class="checkout-footnote">You’ll receive an M-Pesa prompt on your phone. Your PIN is entered only on your device.</p>
+      </section>
+      <p class="checkout-powered">Payments powered by Payflow</p>
+    </main>
+    <script src="config.js"></script>
+    <script src="api.js"></script>
+    <script src="checkout.js"></script>
+  </body>
+</html>

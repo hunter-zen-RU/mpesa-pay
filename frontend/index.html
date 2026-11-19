@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#111827">
+    <title>Payflow — M-Pesa payments for your business</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="./"><span class="brand-mark">P</span> payflow</a>
+      <nav><a href="#integration">Integration</a><a class="button button-small button-quiet" href="dashboard.html">Merchant dashboard</a></nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="live-dot"></span> M-Pesa checkout API</div>
+          <h1>Payments that fit<br>your <span>business.</span></h1>
+          <p class="lead">Create a payment link from your server. Your customer pays securely with M-Pesa, and you track the result from one simple dashboard.</p>
+          <div class="hero-actions"><a class="button button-primary" href="#integration">Explore the API <span aria-hidden="true">→</span></a><a class="button button-quiet" href="dashboard.html">Open dashboard</a></div>
+          <p class="fine-print">M-Pesa sandbox or production credentials are required to collect payments.</p>
+        </div>
+        <div class="preview-card">
+          <div class="preview-head"><span>PAYMENT LINK</span><span class="status-pill status-pending">● Pending</span></div>
+          <div class="preview-amount">KES 2,450</div>
+          <div class="preview-sub">Order #ORD-1042</div>
+          <div class="preview-divider"></div>
+          <div class="preview-method"><span class="mpesa-mark">M</span><span><b>M-Pesa</b><small>Pay from your phone</small></span><span class="method-check">✓</span></div>
+          <div class="preview-button">Continue to payment</div>
+          <p class="preview-secure">Secure payment request · No card details stored</p>
+        </div>
+      </section>
+
+      <section class="steps" aria-label="How it works">
+        <article><span class="step-number">01</span><h2>Create a payment</h2><p>Your backend creates a KES payment intent with a reference and optional description.</p></article>
+        <article><span class="step-number">02</span><h2>Share checkout</h2><p>Send the hosted checkout link to your customer or redirect them from your app.</p></article>
+        <article><span class="step-number">03</span><h2>Confirm payment</h2><p>M-Pesa updates the payment status through your server-side callback.</p></article>
+      </section>
+
+      <section class="integration" id="integration">
+        <div>
+          <div class="eyebrow">BUILT FOR DEVELOPERS</div>
+          <h2>One request to get started.</h2>
+          <p class="muted">Create payment intents from your server using your secret API key. Never put that key in browser code or a public repository.</p>
+        </div>
+        <pre><code>POST /api/v1/payment-intents
+Authorization: Bearer YOUR_API_SECRET_KEY
+Content-Type: application/json
+
+{
+  "amount": 2450,
+  "currency": "KES",
+  "reference": "ORD-1042",
+  "description": "Order 1042"
+}</code></pre>
+      </section>
+    </main>
+    <footer><a class="brand" href="./"><span class="brand-mark">P</span> payflow</a><span>M-Pesa payment platform starter</span><a href="dashboard.html">Merchant dashboard →</a></footer>
+    <script src="config.js"></script>
+    <script src="api.js"></script>
+  </body>
+</html>
